@@ -1,0 +1,41 @@
+{
+    "name": "hesamrad/laravel-chatgpt",
+    "description": "A lightweight library to integrate chatGpt into your Laravel application!",
+    "type": "library",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "HesamRad\\LaravelChatGpt\\": "src/"
+        },
+        "files": [
+            "HesamRad/LaravelChatGpt/Helper.php"
+        ]
+    },
+    "authors": [
+        {
+            "name": "Hesam Rad",
+            "email": "hesamzakerirad@gmail.com"
+        }
+    ],
+    "require": {
+        "php": "^8.1",
+        "illuminate/support": "^10.30"
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true,
+    "config": {
+        "sort-packages": true,
+        "preferred-install": "dist",
+        "optimize-autoloader": true
+    },
+    "require-dev": {
+        "orchestra/testbench": "^8.14"
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "HesamRad\\LaravelChatGpt\\LaravelChatGptServiceProvider"
+            ]
+        }
+    }
+}
