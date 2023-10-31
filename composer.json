@@ -8,7 +8,7 @@
             "HesamRad\\LaravelChatGpt\\": "src/"
         },
         "files": [
-            "HesamRad/LaravelChatGpt/Helper.php"
+            "src/helpers.php"
         ]
     },
     "authors": [
