@@ -18,7 +18,8 @@
     "authors": [
         {
             "name": "Hesam Rad",
-            "email": "hesamzakerirad@gmail.com"
+            "email": "hesamzakerirad@gmail.com",
+            "homepage": "https://hesamrad.com"
         }
     ],
     "require": {
