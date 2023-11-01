@@ -36,7 +36,7 @@ class ChatGpt
         $this->apiKey = $apiKey;
 
         $this->httpClient = new Client([
-            'base_uri' => config('chatgpt.api_base_uri'),
+            'base_uri' => config('chatgpt.openai_base_uri'),
             'headers' => [
                 'Authorization' => 'Bearer ' . config('chatgpt.api_key'),
                 'Content-Type' => 'application/json',
