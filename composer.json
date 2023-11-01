@@ -3,6 +3,10 @@
     "description": "A lightweight library to integrate chatGpt into your Laravel application!",
     "type": "library",
     "license": "MIT",
+    "keywords": [                
+        "laravel",
+        "chatgpt"
+    ], 
     "autoload": {
         "psr-4": {
             "HesamRad\\LaravelChatGpt\\": "src/"
