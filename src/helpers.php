@@ -2,7 +2,7 @@
 
 use HesamRad\LaravelChatGpt\ChatGpt;
 
-if (! function_exists('gpt')) {
+if (! function_exists('chatgpt')) {
     /**
      * Ask ChatGpt something that is on your 
      * mind.
@@ -10,7 +10,7 @@ if (! function_exists('gpt')) {
      * @param  string  $question
      * @return string
      */
-    function gpt($question)
+    function chatgpt($question)
     {
         $chatgpt = new ChatGpt(config('chatgpt.api_key'));
 

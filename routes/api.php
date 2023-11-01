@@ -4,7 +4,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
 Route::post('/chatgpt/ask', function (Request $request) {
-    $answer = gpt($request->question);
+    $answer = chatgpt($request->question);
 
     return response()->json([
         'answer' => $answer
