@@ -24,7 +24,6 @@ class ChatGpt
      */
     protected $httpClient;
 
-    public function __construct($apiKey)
     /**
      * Create a new instance of ChatGpt to ask a question
      * from.
@@ -32,11 +31,11 @@ class ChatGpt
      * @param  string  $apiKey
      * @return void
      */
+    public function __construct($apiKey)
     {
         $this->apiKey = $apiKey;
 
         $this->httpClient = new Client([
-            'headers' => config('chatgpt.request_headers')
             'base_uri' => config('chatgpt.api_base_uri'),
             'headers' => [
                 'Authorization' => 'Bearer ' . config('chatgpt.api_key'),
@@ -48,22 +47,21 @@ class ChatGpt
     /**
      * Ask ChatGpt whatever you want!
      *
-     * @param  string  $something
+     * @param  string  $question
      * @return string
      */
-    public function ask($something)
+    public function ask($question)
     {
         if (is_null($question)) {
             throw new InvalidQuestion;
         }
+
         $response = $this->httpClient
             ->post('chat/completions', [
                 'json' => [
-                    'model' => 'gpt-3.5-turbo',
                     'model' => config('chatgpt.model'),
                     'messages' => [
-                        ['role' => 'system', 'content' => 'You are'],
-                        ['role' => 'user', 'content' => $something],
+                        ['role' => 'user', 'content' => $question],
                     ],
                 ],
             ]);
