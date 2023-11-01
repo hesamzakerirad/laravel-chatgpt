@@ -1,3 +1,5 @@
+![Laravel ChatGPT Cover](https://raw.githubusercontent.com/hesamzakerirad/laravel-chatgpt/main/media/cover.png "Laravel ChatGPT Cover")
+
 # Laravel ChatGPT
 Bring ChatGPT to your Laravel application with a few simple steps!
 
