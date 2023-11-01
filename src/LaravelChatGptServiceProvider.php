@@ -22,6 +22,8 @@ class LaravelChatGptServiceProvider extends ServiceProvider
         if ($this->app->runningInConsole()) {
             //
         }
+        
+        $this->loadRoutesFrom(__DIR__ . '/../routes/api.php');
 
         // Publish the config file to control ChatGpt.
         $this->publishes([
