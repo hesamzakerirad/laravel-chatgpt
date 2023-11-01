@@ -6,10 +6,31 @@ use GuzzleHttp\Client;
 
 class ChatGpt
 {
+    /**
+     * The API key used to connect to openai 
+     * servers and communicate with ChatGPT.
+     *
+     * @link https://platform.openai.com/account/api-keys
+     * @var string
+     */
     protected string $apiKey;
+
+    /**
+     * The HTTP client used to send requests
+     * to ChatGPT servers.
+     *
+     * @var mixed
+     */
     protected $httpClient;
 
     public function __construct($apiKey)
+    /**
+     * Create a new instance of ChatGpt to ask a question
+     * from.
+     * 
+     * @param  string  $apiKey
+     * @return void
+     */
     {
         $this->apiKey = $apiKey;
 
