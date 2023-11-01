@@ -35,6 +35,7 @@ class ChatGpt
             ->post('chat/completions', [
                 'json' => [
                     'model' => 'gpt-3.5-turbo',
+                    'model' => config('chatgpt.model'),
                     'messages' => [
                         ['role' => 'system', 'content' => 'You are'],
                         ['role' => 'user', 'content' => $something],
