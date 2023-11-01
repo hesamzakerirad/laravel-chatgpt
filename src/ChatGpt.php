@@ -3,6 +3,7 @@
 namespace HesamRad\LaravelChatGpt;
 
 use GuzzleHttp\Client;
+use HesamRad\LaravelChatGpt\Exceptions\InvalidApiKey;
 use HesamRad\LaravelChatGpt\Exceptions\InvalidQuestion;
 
 class ChatGpt
@@ -33,6 +34,10 @@ class ChatGpt
      */
     public function __construct($apiKey)
     {
+        if (is_null($apiKey)) {
+            throw new InvalidApiKey;
+        }
+
         $this->apiKey = $apiKey;
 
         $this->httpClient = new Client([
