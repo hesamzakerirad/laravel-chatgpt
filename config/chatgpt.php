@@ -33,3 +33,15 @@ return [
     */
     'model' => 'gpt-3.5-turbo',
 
+    /*
+    |--------------------------------------------------------------------------
+    | Internal API Route
+    |--------------------------------------------------------------------------
+    |
+    | This is the route, that our front-end clients could use to talk to ChatGPT. 
+    | You can change it however you wish; but don't leave it empty 
+    | or all hell breaks loose!
+    |
+    */
+    'internal_api_route' => '/api/chatgpt/ask'
+];
