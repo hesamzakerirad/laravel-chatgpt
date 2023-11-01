@@ -64,6 +64,6 @@ class ChatGpt
                 ],
             ]);
 
-        return json_decode($response->getBody(), true);
+        return json_decode($response->getBody(), true)['choices'][0]['message']['content'];
     }
 }
