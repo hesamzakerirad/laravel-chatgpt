@@ -3,6 +3,7 @@
 namespace HesamRad\LaravelChatGpt;
 
 use GuzzleHttp\Client;
+use HesamRad\LaravelChatGpt\Exceptions\InvalidQuestion;
 
 class ChatGpt
 {
@@ -52,6 +53,9 @@ class ChatGpt
      */
     public function ask($something)
     {
+        if (is_null($question)) {
+            throw new InvalidQuestion;
+        }
         $response = $this->httpClient
             ->post('chat/completions', [
                 'json' => [
