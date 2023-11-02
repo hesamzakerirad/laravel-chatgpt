@@ -15,5 +15,10 @@ class TestCase extends BaseTestCase
     public function setUp(): void
     {
         parent::setUp();
+
+        // Binding the main class to the application
+        $this->app->singleton('chatgpt', function () {
+            return new ChatGpt($this->app['config']->get('chatgpt.api_key'));
+        });
     }
 }

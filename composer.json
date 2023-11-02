@@ -15,6 +15,11 @@
             "src/helpers.php"
         ]
     },
+    "autoload-dev": {
+        "psr-4": {
+            "HesamRad\\LaravelChatGpt\\Tests\\": "tests"
+        }
+    },
     "authors": [
         {
             "name": "Hesam Rad",
@@ -24,6 +29,7 @@
     ],
     "require": {
         "php": "^8.1",
+        "guzzlehttp/guzzle": "^7.8",
         "illuminate/support": "^10.30"
     },
     "minimum-stability": "dev",
@@ -34,7 +40,8 @@
         "optimize-autoloader": true
     },
     "require-dev": {
-        "orchestra/testbench": "^8.14"
+        "orchestra/testbench": "^8.14",
+        "phpunit/phpunit": "^10.4"
     },
     "extra": {
         "laravel": {

@@ -57,7 +57,9 @@ class ChatGpt
      */
     public function ask($question)
     {
-        if (is_null($question)) {
+        $question = trim($question);
+
+        if (empty($question)) {
             throw new InvalidQuestion;
         }
 
