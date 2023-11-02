@@ -68,12 +68,12 @@ class ImaginaryController extends Controller
      * This method connects to ChatGPT servers
      * and asks the given question.
      *
-     * @param  string  $question
+     * @param  \Illuminate\Http\Response  $request
      * @return \Illuminate\Http\Response
      */
-    public function ImaginaryMethod($question)
+    public function ImaginaryMethod(Request $request)
     {
-        $answer = chatgpt($question);
+        $answer = chatgpt($request->input('question'));
 
         return response($answer, Response::HTTP_OK);
     }
@@ -101,12 +101,12 @@ class ImaginaryController extends Controller
      * This method connects to ChatGPT servers
      * and asks the given question.
      *
-     * @param  string  $question
+     * @param  \Illuminate\Http\Response  $request
      * @return \Illuminate\Http\Response
      */
-    public function ImaginaryMethod($question)
+    public function ImaginaryMethod(Request $request)
     {
-        $answer = ChatGpt::ask($question);
+        $answer = chatgpt($request->input('question'));
 
         return response($answer, Response::HTTP_OK);
     }
